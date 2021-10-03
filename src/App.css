@@ -1,38 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
+  border: solid 5px #ffb703;
+  min-width: 1220px;
+  min-height: 720px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainpage {
+  /* background-color: sandybrown; */
+  margin: 30px;
+  /* width: 1220px; */
+  /* min-height: 720px; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.center-horizontal {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+  width: 720px;
+}
+
+.text-overflow:hover {
+  overflow: visible;
+}
+
+.img-overflow {
+  overflow: scroll;
+}
+
+.title {
+  font: 42px 'Open Sans', sans-serif;
+}
+
+.sub-title {
+  font: 42px 'Roboto', sans-serif;
+}
+
+.link-active {
+  color: #023047;
+}
+
+.link-inactive {
+  color: #ffb703;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.padding-top-50 {
+  padding-top: 50px;
+}
+
+.padding-bottom-20 {
+  padding-bottom: 20px;
+}
+
+.padding-right-10 {
+  padding-right: 10px;
+}
+
+.padding-left-30 {
+  padding-left: 30px;
+}
+
+.disable-link-decoration {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: #fb8500;
+  border: none;
   color: white;
+  padding: 15px 32px;
 }
 
-.App-link {
-  color: #61dafb;
+/* == */
+
+.home {
+  padding: 50px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* == */
+
+.flutter {
+  /* background-color: sandybrown; */
+  padding: 50px 0 30px 0;
+}
+
+.flutter img {
+  width: 500px;
+  height: 200px;
+  margin: 0 10px;
+}
+
+.img-showoff {
+  /* width: 1280px; */
+  margin: 30px 0;
+}
+
+.kecil img {
+  width: 300px;
+}
+
+.penjelasan {
+  padding: 0 30px;
 }
