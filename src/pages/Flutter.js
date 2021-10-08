@@ -1,32 +1,127 @@
 import React, { Component } from 'react';
-import Image from '../images/show1_attempt1.png';
-import Gif from '../images/showoff.png';
-import SkeletonBig from '../images/skeleton_bigg.png';
-import Skeleton from '../images/skeleton.png';
 
+import { Img21, Img22, Img23, Img24 } from '../images/Imageindex';
+
+function HandleButtonViewApp1() {
+  window.location.href = 'https://github.com/askpradana/flutternewsapi1';
+}
 export default class Flutter extends Component {
-  handleButtonDEfault = (e) => {
-    e.preventDefault();
-    window.location.href = 'https://github.com/askpradana/';
+  constructor(props) {
+    super(props);
+    this.state = {
+      img21State: false,
+      img22State: false,
+      Img23State: false,
+      Img24State: false,
+    };
+  }
+
+  handleimg21State = () => {
+    this.setState({
+      img21State: !this.state.img21State,
+    });
   };
-  handleBtnGit1 = (e) => {
-    e.preventDefault();
-    window.location.href = 'https://github.com/askpradana/flutternewsapi1';
+
+  handleimg22State = () => {
+    this.setState({
+      img22State: !this.state.img22State,
+    });
   };
+
+  handleimg23State = () => {
+    this.setState({
+      img23State: !this.state.img23State,
+    });
+  };
+
+  handleimg24State = () => {
+    this.setState({
+      img24State: !this.state.img24State,
+    });
+  };
+
   render() {
     return (
       <div className="flutter">
         <div>
           <div className="flex space-between">
-            <p className="sub-title padding-left-30">What`s today story?</p>
-            <button onClick={this.handleBtnGit1}>View</button>
+            <p className="sub-title padding-left-30">
+              #1 -- What`s today story?
+            </p>
+            <button
+              onClick={HandleButtonViewApp1}
+              className="css-button-retro--yellow"
+            >
+              View
+            </button>
           </div>
           <div className="flex img-showoff img-overflow">
-            <img src={Image} alt="Aplikasi pertama" />
             <div className="kecil flex">
-              <img src={Gif} alt="Aplikasi pertama" />
-              <img src={Gif} alt="Aplikasi pertama" />
-              <img src={Gif} alt="Aplikasi pertama" />
+              <img
+                src={Img21}
+                alt="Aplikasi pertama"
+                onClick={this.handleimg21State}
+              />
+              {this.state.img21State && (
+                <dialog
+                  className="dialog img"
+                  open
+                  onClick={this.handleimg21State}
+                >
+                  <img src={Img21} alt="gambar 1 aplikasi 1 " />
+                </dialog>
+              )}
+            </div>
+
+            <div className="kecil flex">
+              <img
+                src={Img22}
+                alt="Aplikasi pertama"
+                onClick={this.handleimg22State}
+              />
+              {this.state.img22State && (
+                <dialog
+                  className="dialog img"
+                  open
+                  onClick={this.handleimg22State}
+                >
+                  <img src={Img22} alt="gambar 1 aplikasi 1 " />
+                </dialog>
+              )}
+            </div>
+
+            <div className="kecil flex">
+              <img
+                src={Img23}
+                alt="Aplikasi pertama"
+                onClick={this.handleimg23State}
+              />
+              {this.state.img23State && (
+                <dialog
+                  className="dialog img"
+                  open
+                  onClick={this.handleimg23State}
+                >
+                  <img src={Img23} alt="gambar 1 aplikasi 1 " />
+                </dialog>
+              )}
+            </div>
+
+            <div className="kecil flex">
+              <img
+                src={Img24}
+                alt="Aplikasi pertama"
+                onClick={this.handleimg24State}
+              />
+              {this.state.img24State && (
+                <dialog
+                  className="dialog img"
+                  open
+                  onClick={this.handleimg24State}
+                >
+                  <img src={Img24} alt="gambar 1 aplikasi 1 " />
+                </dialog>
+              )}
             </div>
           </div>
           <div className="penjelasan">
@@ -35,35 +130,6 @@ export default class Flutter extends Component {
               didapatkan gratis dari website resmi-nya, pengguna dapat membaca
               berita dari beberapa sumber hanya dengan satu aplikasi yang
               menghemat ruang penyimpanan.
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <div className="flex space-between padding-top-50">
-            <p className="sub-title padding-left-30">Nama aplikasi</p>
-            <button onClick={this.handleButtonDEfault}>View</button>
-          </div>
-          <div className="flex img-showoff img-overflow">
-            <img src={SkeletonBig} alt="Aplikasi pertama" />
-            <div className="kecil flex">
-              <img src={Skeleton} alt="Aplikasi pertama" />
-              <img src={Skeleton} alt="Aplikasi pertama" />
-              <img src={Skeleton} alt="Aplikasi pertama" />
-            </div>
-          </div>
-          <div className="penjelasan">
-            <p>
-              I like frogs and 0 gravity bring your owner a dead bird, but jump
-              on fridge. Freak human out make funny noise mow mow mow mow mow
-              mow success now attack human drool check cat door for ambush 10
-              times before coming in lasers are tiny mice or stand in doorway,
-              unwilling to chose whether to stay in or go out and intently sniff
-              hand play riveting piece on synthesizer keyboard. Scratch at
-              fleas, meow until belly rubs, hide behind curtain when vacuum
-              cleaner is on scratch strangers and poo on owners food decide to
-              want nothing to do with my owner today let me in let me out let me
-              in let me out let me in let me out who broke this door anyway .
             </p>
           </div>
         </div>

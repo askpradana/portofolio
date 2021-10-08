@@ -9,7 +9,9 @@ export default class Menu extends Component {
         <div onClick={this.props.home} className="padding-right-10 clickable">
           <p
             className={
-              this.props.pageAktif === 'home' ? 'link-active' : 'link-inactive'
+              this.props.pageAktif === 'home'
+                ? 'css-button-3d--black flex-center'
+                : 'css-button-3d--grey flex-center'
             }
           >
             Home
@@ -22,8 +24,8 @@ export default class Menu extends Component {
           <p
             className={
               this.props.pageAktif === 'flutter'
-                ? 'link-active'
-                : 'link-inactive'
+                ? 'css-button-3d--black flex-center'
+                : 'css-button-3d--grey flex-center'
             }
           >
             Flutter
@@ -33,8 +35,8 @@ export default class Menu extends Component {
           <p
             className={
               this.props.pageAktif === 'contactme'
-                ? 'link-active'
-                : 'link-inactive'
+                ? 'css-button-3d--black flex-center'
+                : 'css-button-3d--grey flex-center'
             }
           >
             Contact me

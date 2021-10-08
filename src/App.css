@@ -20,6 +20,12 @@
   display: flex;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .space-between {
   justify-content: space-between;
 }
@@ -96,6 +102,10 @@ button {
   padding: 15px 32px;
 }
 
+.list li {
+  padding: 10px 0;
+}
+
 /* == */
 
 .home {
@@ -113,6 +123,18 @@ button {
   width: 500px;
   height: 200px;
   margin: 0 10px;
+  object-fit: contain;
+}
+
+.dialog {
+  /* box-shadow: 0 8px 60px -6px black; */
+  position: absolute;
+  left: 50%;
+}
+
+.img {
+  width: 500;
+  height: 800;
 }
 
 .img-showoff {
@@ -121,9 +143,97 @@ button {
 }
 
 .kecil img {
+  cursor: pointer;
+  width: 100px;
+  padding: 0 10px;
+}
+
+.img img {
+  height: 500px;
   width: 300px;
+  position: absolute;
+  top: -100px;
 }
 
 .penjelasan {
   padding: 0 30px;
+}
+
+.css-button-3d--black {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background: #343a40;
+  box-shadow: 0 5px #212529;
+}
+.css-button-3d--black:hover {
+  box-shadow: 0 3px #212529;
+  top: 1px;
+}
+.css-button-3d--black:active {
+  box-shadow: 0 0 #212529;
+  top: 5px;
+}
+
+.css-button-3d--grey {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background: #6c757d;
+  box-shadow: 0 5px #495057;
+}
+.css-button-3d--grey:hover {
+  box-shadow: 0 3px #495057;
+  top: 1px;
+}
+.css-button-3d--grey:active {
+  box-shadow: 0 0 #495057;
+  top: 5px;
+}
+
+.css-button-retro--yellow {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: 1px solid #000;
+  color: #000;
+  background: transparent;
+}
+.css-button-retro--yellow:hover:after {
+  top: 0;
+  left: 0;
+}
+.css-button-retro--yellow:after {
+  content: '';
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 5px;
+  left: 5px;
+  transition: 0.2s;
+  background-color: #ffe566;
 }
